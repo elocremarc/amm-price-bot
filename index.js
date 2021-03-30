@@ -21,8 +21,6 @@ const exchangeContract = new web3.eth.Contract(
   ABI.EXCHANGE_ADDRESS
 );
 
-const ETH_AMOUNT = web3.utils.toWei("1", "Ether");
-
 async function blockchainData() {
   const tokenaddress = await tokenContract.methods.totalSupply().call();
   console.log(web3.utils.fromWei(tokenaddress));
