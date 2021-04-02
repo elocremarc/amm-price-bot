@@ -60,7 +60,6 @@ const Price = async (_tokenAddress) => {
   let price = trade.executionPrice.toSignificant(6);
   return price;
 };
-
 const StableCoin = async () => {
   const stableCoinPrice = [];
 
@@ -79,11 +78,12 @@ const StableCoin = async () => {
   const averageEthPrice = priceAccum / stableCoinPrice.length;
   console.log("Average Stablecoin ETH Price", averageEthPrice);
 };
-
+const ERC20_Price = async () => {
+  console.log("uniswap price per ETH");
+  for (const token in ERC20) {
+    let price = await Price(ERC20[token]);
+    console.log(`${price} ${token}`);
+  }
+};
 StableCoin();
-
-console.log("uniswap price per ETH");
-for (const token in ERC20) {
-  let price = await Price(ERC20[token]);
-  console.log(`${price} ${token}`);
-}
+ERC20_Price();

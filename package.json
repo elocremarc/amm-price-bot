@@ -13,6 +13,7 @@
   "dependencies": {
     "@alch/alchemy-web3": "^1.0.1",
     "@truffle/hdwallet-provider": "^1.2.5",
+    "@sushiswap/sdk": "^4.1.1",    
     "@uniswap/sdk": "^3.0.3",
     "dotenv": "^8.2.0",
     "ethers": "^5.0.32",
